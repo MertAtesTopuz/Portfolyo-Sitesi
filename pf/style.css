@@ -1,0 +1,1578 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    cursor: url('./img/cursor_default.png') 10 10, auto;
+    --nav-link-load-time: 300ms;
+    --nav-load-time: 500ms;
+    --article-load-delay: 800ms;
+    --article-load-h1-delay: 600ms;
+    --article-load-h2-delay: 700ms;
+}
+
+h1 {
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 60px;
+    animation: article-load 300ms ease-in var(--article-load-h1-delay);
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+h2 {
+    animation: article-load 300ms ease-in var(--article-load-delay);
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+p,
+a,
+h3,
+ul,
+li,
+.box,
+span,
+img,
+button,
+form,
+.work {
+    animation: article-load 300ms ease-in var(--article-load-delay);
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+@keyframes article-load {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/*        navbar       */
+
+nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 3%;
+    z-index: 100;
+    background-color: #121212;
+    padding-bottom: 20px;
+    animation: nav-load var(--nav-load-time) ease-in;
+}
+
+@keyframes nav-load {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+a:hover {
+    cursor: url('./img/cursor_select.png') 10 10, auto;
+}
+
+button:hover {
+    cursor: url('./img/cursor_select.png') 10 10, auto;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    cursor: url('./img/cursor_select.png') 10 10, auto;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.logo span {
+    color: #0065BD;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+    animation-name: nav-link-load;
+    opacity: 1;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: var(--nav-load-time);
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    transform: translateY(0px);
+}
+
+@keyframes nav-link-load {
+    0% {
+        transform: scale(0);
+    }
+
+    90% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+nav ul li a {
+    padding-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #0065BD;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/*         header        */
+
+.header {
+    height: 100vh;
+    width: 100%;
+    /* bunu daha sonra resim yap */
+    background-color: #121212;
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+.content a {
+    text-decoration: none;
+}
+
+a .over {
+    color: #00c6e0;
+}
+
+a .drive {
+    color: #ea0000;
+}
+
+.maximus {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.content h1 {
+    text-align: left;
+}
+
+/*        about       */
+
+#about {
+    padding: 30px 0;
+    color: white;
+    /* sonra bunu 121212 yap resmi koyduktan sonra */
+    background-color: #191919;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.row h2 {
+    color: #0065BD;
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.row p {
+    color: white;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+.btn5 {
+    display: block;
+    margin-top: 30px;
+    width: fit-content;
+    border: 3px solid #0065BD;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.btn5:hover {
+    background: #0065BD;
+}
+
+.row li {
+    color: white;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-bottom: 14px;
+}
+
+.row ul {
+    padding-left: 20px;
+}
+
+.about-col-1 {
+    flex-basis: 45%;
+    padding-left: 120px;
+    padding-right: 30px;
+}
+
+.about-col-2 {
+    flex-basis: 55%;
+    padding-left: 120px;
+    padding-right: 130px;
+}
+
+/* programs */
+#programs {
+    padding: 30px 0;
+    color: white;
+    background-color: #242424;
+    display: flex;
+}
+
+#programs .box img {
+    width: 80%;
+    height: auto;
+}
+
+#programs .box {
+    padding-left: 60px;
+    flex: 1;
+}
+
+/* portfolio */
+
+#portfolio {
+    padding: 50px 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #121212;
+}
+
+.container-2 h2 {
+    color: #0065BD;
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #0065BD);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #0065BD;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 3px solid #0065BD;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.profile_column {
+    border: groove;
+    border-color: #e1e1e1;
+    border-width: 3px;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+
+
+.btn:hover {
+    background: #0065BD;
+    color: #ffe6ff;
+    color: #ff65bd;
+    color: #ff2483;
+    color: #8ba4bb;
+    color: #0065BD;
+    color: #034c8b;
+
+}
+
+#contact {
+    background-color: #121212;
+}
+
+/* Contact */
+
+.contact-left {
+    flex-basis: 35%;
+    padding-left: 60px;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 27px;
+    font-size: 16px;
+}
+
+.contact-left p i {
+    color: #0065BD;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact-left p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.social-icon {
+    margin-top: 40px;
+}
+
+.social-icon a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icon a:hover {
+    color: #0065BD;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background-color: #0065BD;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 94%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: #242424;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright span {
+    color: #0065BD;
+}
+
+#msg {
+    color: #51b752;
+    margin-top: -40px;
+    display: block;
+}
+
+/* Skills */
+
+#skills {
+    padding: 90px 0;
+    color: white;
+    background-color: #121212;
+    display: flex;
+    width: 100%;
+}
+
+.skill-div {
+    width: 92%;
+}
+
+#skills .skill-head {
+    color: #0065BD;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 48%;
+    text-decoration: underline #0065BD;
+}
+
+
+.row-2 h3 {
+    color: #0065BD;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    margin-top: 60px;
+    text-decoration: underline #0065BD;
+}
+
+.line1 {
+    background-color: #242424;
+    height: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-left: 50px;
+
+}
+
+.line2 {
+    background-color: #242424;
+    height: 10px;
+    width: 100%;
+    margin-left: 50px;
+}
+
+.line10 {
+    background-color: #242424;
+    height: 10px;
+    width: 100%;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+.line3 {
+    background-color: #242424;
+    height: 10px;
+    width: 100%;
+    margin-bottom: -45px;
+    margin-left: 50px;
+    margin-top: 60px;
+}
+
+/*progress bar*/
+
+.skill-bar {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    text-align: center;
+    padding-left: 70px;
+}
+
+.outer {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.05),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    background-color: #e3edf7;
+}
+
+.inner {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.1),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.4),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 0.4),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.05),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#skills .main-div h2 {
+    margin-left: 22px;
+    margin-right: -180px;
+}
+
+#skills .main-div {
+    display: flex;
+}
+
+#skills .main-div-2 h2 {
+    margin-left: 22px;
+    margin-right: -180px;
+}
+
+#skills .main-div-2 {
+    display: flex;
+    padding-top: 75px;
+    margin-bottom: 60px;
+}
+
+#skills .skill-tager {
+    margin-right: 100px;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+#number {
+    font-weight: 600px;
+    font-size: 30px;
+    color: #0065BD;
+}
+
+circle {
+    fill: none;
+    padding-left: 0px;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+}
+
+svg {
+    position: absolute;
+    top: 53px;
+    left: 70px;
+}
+
+#skills .skill-level-mid {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-bottom: 17px;
+    padding-right: 120px;
+
+}
+
+#skills .skill-level-beg {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-bottom: 17px;
+    padding-right: 125px;
+}
+
+#skills .skill-level-ex {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 26px;
+    padding-bottom: 22px;
+    padding-right: 107px;
+
+}
+
+/* game designe */
+
+#skills .skill-bar .skill-name-gd {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.gdcircle {
+    animation: animGD 2s linear forwards;
+}
+
+@keyframes animGD {
+    100% {
+        stroke-dashoffset: 188.8;
+    }
+}
+
+/* game develop */
+
+#skills .skill-bar .skill-name-gdev {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.gdevcircle {
+    animation: animGDev 2s linear forwards;
+}
+
+@keyframes animGDev {
+    100% {
+        stroke-dashoffset: 141.6;
+    }
+}
+
+/* 3d artist */
+
+#skills .skill-bar .skill-name-3d {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.threedcircle {
+    animation: anim3d 2s linear forwards;
+}
+
+@keyframes anim3d {
+    100% {
+        stroke-dashoffset: 212.4;
+    }
+}
+
+/* web developer */
+
+#skills .skill-bar .skill-name-web {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.webcircle {
+    animation: animweb 2s linear forwards;
+}
+
+@keyframes animweb {
+    100% {
+        stroke-dashoffset: 259.6;
+    }
+}
+
+/* etical hacking */
+
+#skills .skill-bar .skill-name-hack {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.hackcircle {
+    animation: animhack 2s linear forwards;
+}
+
+@keyframes animhack {
+    100% {
+        stroke-dashoffset: 330.4;
+    }
+}
+
+/* html / css */
+
+#skills .skill-bar .skill-name-html {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.htmlcircle {
+    animation: animhtml 2s linear forwards;
+}
+
+@keyframes animhtml {
+    100% {
+        stroke-dashoffset: 188.8;
+    }
+}
+
+/* C# */
+
+#skills .skill-bar .skill-name-cs {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.cscircle {
+    animation: animcs 2s linear forwards;
+}
+
+@keyframes animcs {
+    100% {
+        stroke-dashoffset: 90;
+    }
+}
+
+/* c++ */
+
+#skills .skill-bar .skill-name-cp {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.cpcircle {
+    animation: animcp 2s linear forwards;
+}
+
+@keyframes animcp {
+    100% {
+        stroke-dashoffset: 330.4;
+    }
+}
+
+/*python*/
+
+#skills .skill-bar .skill-name-py {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.pycircle {
+    animation: animpy 2s linear forwards;
+}
+
+@keyframes animpy {
+    100% {
+        stroke-dashoffset: 259.6;
+    }
+}
+
+/* Kali Linux */
+
+#skills .skill-bar .skill-name-li {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.licircle {
+    animation: animli 2s linear forwards;
+}
+
+@keyframes animli {
+    100% {
+        stroke-dashoffset: 188.8;
+    }
+}
+
+/* MacOs */
+
+#skills .skill-bar .skill-name-mac {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.maccircle {
+    animation: animmac 2s linear forwards;
+}
+
+@keyframes animmac {
+    100% {
+        stroke-dashoffset: 70;
+    }
+}
+
+/* Windows 7-10 */
+
+#skills .skill-bar .skill-name-win {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.wincircle {
+    animation: animwin 2s linear forwards;
+}
+
+@keyframes animwin {
+    100% {
+        stroke-dashoffset: 105;
+    }
+}
+
+/* Krita */
+
+#skills .skill-bar .skill-name-kri {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -100px;
+    margin-right: -170px;
+}
+
+.kricircle {
+    animation: animkri 2s linear forwards;
+}
+
+@keyframes animkri {
+    100% {
+        stroke-dashoffset: 236;
+    }
+}
+
+/* Unity */
+
+#skills .skill-bar .skill-name-uni {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.unicircle {
+    animation: animuni 2s linear forwards;
+}
+
+@keyframes animuni {
+    100% {
+        stroke-dashoffset: 141.6;
+    }
+}
+
+/* Git Kraken */
+
+#skills .skill-bar .skill-name-git {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.gitcircle {
+    animation: animgit 2s linear forwards;
+}
+
+@keyframes animgit {
+    100% {
+        stroke-dashoffset: 118;
+    }
+}
+
+/* Blender */
+
+#skills .skill-bar .skill-name-ble {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.blecircle {
+    animation: animble 2s linear forwards;
+}
+
+@keyframes animble {
+    100% {
+        stroke-dashoffset: 212.4;
+    }
+}
+
+/* SolidWorks */
+
+#skills .skill-bar .skill-name-sw {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.swcircle {
+    animation: animsw 2s linear forwards;
+}
+
+@keyframes animsw {
+    100% {
+        stroke-dashoffset: 165.2;
+    }
+}
+
+/* UTM */
+
+#skills .skill-bar .skill-name-utm {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.utmcircle {
+    animation: animutm 2s linear forwards;
+}
+
+@keyframes animutm {
+    100% {
+        stroke-dashoffset: 236;
+    }
+}
+
+/* Arduino */
+
+#skills .skill-bar .skill-name-ardu {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.arducircle {
+    animation: animardu 2s linear forwards;
+}
+
+@keyframes animardu {
+    100% {
+        stroke-dashoffset: 212.4;
+    }
+}
+
+/* Ultimaker Cura */
+
+#skills .skill-bar .skill-name-uc {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.uccircle {
+    animation: animuc 2s linear forwards;
+}
+
+@keyframes animuc {
+    100% {
+        stroke-dashoffset: 70.8;
+    }
+}
+
+/* Aseprite */
+
+#skills .skill-bar .skill-name-ase {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.asecircle {
+    animation: animase 2s linear forwards;
+}
+
+@keyframes animase {
+    100% {
+        stroke-dashoffset: 188.8;
+    }
+}
+
+/* VS Code*/
+
+#skills .skill-bar .skill-name-vs {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.vscircle {
+    animation: animvs 2s linear forwards;
+}
+
+@keyframes animvs {
+    100% {
+        stroke-dashoffset: 70.8;
+    }
+}
+
+/* Microsoft Office */
+
+#skills .skill-bar .skill-name-of {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 20px;
+    padding-top: 17px;
+    margin-left: -80px;
+    margin-right: -157px;
+}
+
+.ofcircle {
+    animation: animof 2s linear forwards;
+}
+
+@keyframes animof {
+    100% {
+        stroke-dashoffset: 70.8;
+    }
+}
+
+/* Ultimaker Cura */
+
+#skills .skill-bar .skill-name-lib {
+    text-align: center;
+    color: #e3edf7;
+    font-size: 30px;
+    padding-top: 17px;
+    margin-left: -90px;
+    margin-right: -170px;
+}
+
+.libcircle {
+    animation: animlib 2s linear forwards;
+}
+
+@keyframes animlib {
+    100% {
+        stroke-dashoffset: 94.4;
+    }
+}
+
+/* project */
+
+#project {
+    padding: 90px 0;
+    color: white;
+    background-color: #121212;
+    display: flex;
+    width: 100%;
+}
+
+.row-project .project-name {
+    color: #0065BD;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    margin-top: 60px;
+    text-decoration: underline #0065BD;
+}
+
+#project .row-project-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#project .row-project-2 h2 {
+    color: #0065BD;
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+#project .row-project-2 li {
+    color: white;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-bottom: 14px;
+}
+
+#project .row-project-2 ul {
+    padding-left: 20px;
+}
+
+#project .certificate-col-1 {
+    flex-basis: 45%;
+    padding-left: 120px;
+    padding-right: 30px;
+}
+
+#project .certificate-col-2 {
+    flex-basis: 55%;
+    padding-left: 120px;
+    padding-right: 130px;
+}
+
+#project .main-div-certificate {
+    display: flex;
+    padding-left: 130px;
+    padding-right: 50px;
+}
+
+#project .main-div h2 {
+    margin-left: 22px;
+    margin-right: -180px;
+}
+
+#project .main-div {
+    display: flex;
+    padding-left: 130px;
+    padding-right: 50px;
+}
+
+#project .project-head {
+    color: #0065BD;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 48%;
+    text-decoration: underline #0065BD;
+}
+
+.project-div {
+    width: 92%;
+}
+
+.layer-project {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #0065BD);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 11px;
+    color: white;
+    transition: height 0.5s;
+}
+
+.layer-project h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer-project a {
+    margin-top: 10px;
+    color: #0065BD;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 25px;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.work:hover .layer-project {
+    height: 100%;
+}
+
+/* About */
+#about {
+    padding: 90px 0;
+    color: white;
+    background-color: #121212;
+    display: flex;
+    width: 100%;
+}
+
+.row-about .about-name {
+    color: #0065BD;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    padding-left: 50%;
+    margin-top: 60px;
+}
+
+#about .about-head {
+    color: #0065BD;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 48%;
+}
+
+#about .about-head-e {
+    color: #0065BD;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 45%;
+}
+
+#about .about-head-t {
+    color: #0065BD;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 44%;
+}
+
+#about .about-head-y {
+    color: #0065BD;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 48%;
+}
+
+.about-div {
+    width: 92%;
+}
+
+#about .about-past p {
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+#about .Okul .school-head {
+    color: #0065BD;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 30px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+#about .egitim .school-head {
+    color: #0065BD;
+    font-size: 30px;
+    text-align: left;
+    text-decoration: underline;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+#about .language .school-head {
+    color: #0065BD;
+    font-size: 30px;
+    text-align: left;
+    text-decoration: underline;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+#about .language ul li {
+    margin-left: 20px;
+}
+
+#about .about-school ul {
+    padding-left: 35px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+#about .about-school ul li {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+#about .about-school ul li .li-div-1 {
+    padding: 15px;
+    margin-right: 35px;
+}
+
+#about .about-school ul li .li-div-2 {
+    padding: 15px;
+    margin-right: 240px;
+}
+
+#about .about-school ul li .li-div-3 {
+    padding: 15px;
+    margin-right: 60px;
+}
+
+#about .about-school ul li .li-div-4 {
+    padding: 15px;
+    margin-right: -10px;
+}
+
+#about .time {
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    width: fit-content;
+    border: 3px solid #0065BD;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+#about .about-experience ul {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+#about .about-experience ul li {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+#about .about-experience ul li .li-div-5 {
+    padding: 15px;
+    margin-right: 200px;
+}
+
+#about .about-experience ul li .li-div-6 {
+    padding: 15px;
+    margin-right: 45px;
+}
+
+#about .about-experience ul li .li-div-7 {
+    padding: 15px;
+    margin-right: 287px;
+}
+
+#about .about-experience ul li .li-div-8 {
+    padding: 15px;
+    margin-right: 200px;
+}
+
+#about .main-div ul li {
+
+    margin-left: 42%;
+    margin-right: 20%;
+    font-size: 22px;
+}
+
+#about .main-div ul li a {
+
+    color: #fff;
+}
+
+.line4 {
+    background-color: #242424;
+    height: 10px;
+    width: 100%;
+    margin-bottom: -45px;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+/* responsive */
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #0065BD;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
+
+
+/*  .....................,,-~*~,,
+......................./:.:.:.:.:.|
+......................|;.;.;.;.;./
+......................|.;.;.;.;.|
+............._,,,,,_.).;.;.;.;.|
+.........,,-":.:.:.:."~-,;.;.;.|
+........(_,,,,---,,_:.:.);.;.;..",,
+......,-":.:.:.:.:.""-,,/;.;.;.;.;.",
+.....(:.__,,,,,,,,,___);.;.;.;.;.;|
+...../"":.:.:.:.:.:.:¯""\;.;.;.;.;.,"
+....\",__,,,,,,,,,,,__/;;;;;;;;;/\
+.....\.::.:.:.:.:.:.:.;.);;;;;;;;;/:\
+.......\,,,,,---~~~~;;;;;;;;,"::::\
+.........."""~~--,,,,,,,,,,-"::::::::::\
+...................\:::::::::::::::::::::::\ */
+
+/*#242424*/

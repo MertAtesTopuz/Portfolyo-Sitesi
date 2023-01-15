@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<!-- 
+iletişim kısmına dc yi koy
+açılış animasyonlarını hallet
+circle rengini ayarla
+projeler kısmını yap
+-->
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/544e3e4d48.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js"></script>
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar">
+
+        <a href="./index.html">
+            <h2 class="logo"><b>Mert Ateş <span>Topuz</span></b></h2>
+        </a><!--bunu daha sonra resim yap-->
+        <ul>
+            <li><a href="./hakkımda.html">Hakkımda</a></li>
+            <li><a href="#">Beceriler</a></li>
+            <li><a href="./projeler.html">Projeler</a></li>
+            <li><a href="http://mertatestopuz.cf" target="_blank">Linkler</a></li>
+            <li><a href="#contact">İletişim</a></li>
+            <i class="fa-solid fa-xmark-large"></i>
+        </ul>
+        <i class="fa-solid fa-bars"></i>
+    </nav>
+
+    <div id="skills">
+        <div class="skill-div">
+            <h2 class="skill-head">Beceriler</h2>
+            <div class="row-2">
+                <div class="skill-container">
+                    <h3>Yetkinlikler</h3>
+                    <div class="line1"></div>
+                    <div class="main-div">
+                        <!--Game designe circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">60%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="gdcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-gd">Game Designer</h2>
+                            </div>
+                        </div>
+
+                        <!--Game developer circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">70%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="gdevcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-gdev">Game Developer</h2>
+                            </div>
+                        </div>
+
+                        <!--3D Artist circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">55%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="threedcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-3d">3D Artist</h2>
+                            </div>
+                        </div>
+
+                        <!--Web Developer Circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">45%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="webcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-web">Web Developer</h2>
+                            </div>
+                        </div>
+
+                        <!--Etical Hacking Circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-beg">Begginer</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">30%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="hackcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-hack">Etical Hacking</h2>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="skill-container">
+                    <h3>Yazılım Dilleri</h3>
+                    <div class="line1"></div>
+                    <div class="main-div">
+                        <!--Html/Css circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">60%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="htmlcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-html">HTML / CSS</h2>
+                            </div>
+                        </div>
+
+                        <!--C# circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-ex">Expert Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">87%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="cscircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-cs">C#</h2>
+                            </div>
+                        </div>
+
+                        <!--python circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">45%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="pycircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-py">Python</h2>
+                            </div>
+                        </div>
+
+                        <!--C++ Circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-beg">Begginer</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">30%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="cpcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-cp">C++</h2>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="skill-container">
+                    <h3>Bilgisayar - Sunucu</h3>
+                    <div class="line1"></div>
+                    <div class="main-div">
+                        <!--Kali Linux circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">60%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="licircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-li">Kali Linux</h2>
+                            </div>
+                        </div>
+
+                        <!--MacOS circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-ex">Expert Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">92%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="maccircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-mac">MacOs</h2>
+                            </div>
+                        </div>
+
+                        <!--Windows 7-10 circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-ex">Expert Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">82%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="wincircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-win">Windows 7-10</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-container">
+                    <h3>Bilgisayar - Uygulama</h3>
+                    <div class="line1"></div>
+                    <div class="main-div">
+                        <!--Krita circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">50%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="kricircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-kri">Krita</h2>
+                            </div>
+                        </div>
+
+                        <!--Unity circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-ex">Expert Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">70%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="unicircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-uni">Unity</h2>
+                            </div>
+                        </div>
+
+                        <!--Git Kraken circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-ex">Expert Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">75%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="gitcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-git">Git Kraken</h2>
+                            </div>
+                        </div>
+
+                        <!--Blender Circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">55%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="blecircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-ble">Blender</h2>
+                            </div>
+                        </div>
+
+                        <!--SolidWorks Circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">65%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="swcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-sw">SolidWorks</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="line3"></div>
+
+                    <div class="main-div-2">
+                        <!--Utm circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">50%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="utmcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-utm">UTM</h2>
+                            </div>
+                        </div>
+
+                        <!--Arduino circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">55%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="arducircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-ardu">Arduino</h2>
+                            </div>
+                        </div>
+
+                        <!--Ultimaker Cura circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-ex">Expert Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">85%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="uccircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-uc">Ultimaker Cura</h2>
+                            </div>
+                        </div>
+
+                        <!--Aseprite Circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-mid">Mid Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">60%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="asecircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-ase">Aseprite</h2>
+                            </div>
+                        </div>
+
+                        <!--Visual Studio Code circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-ex">Expert Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">85%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="vscircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-vs">Visual Studio Code</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="line3"></div>
+
+                    <div class="main-div-2">
+
+                        <!--Office Circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-ex">Expert Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">85%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="ofcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-of">Microsoft Office (Word-Excel-PowerPoint etc)
+                                </h2>
+                            </div>
+                        </div>
+
+                        <!--Libre Office circle-->
+                        <div class="skill-tager">
+                            <div class="skill-bar">
+                                <h2 class="skill-level-ex">Expert Level</h2>
+                                <div class="outer">
+                                    <div class="inner">
+                                        <div id="number">80%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                    <defs>
+                                        <linearGradient id="GradientColor">
+                                            <stop offset="0%" stop-color="#e91e63" />
+                                            <stop offset="100%" stop-color="#673ab7" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="libcircle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                                </svg>
+                                <h2 class="skill-name-lib">Libre Office</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="line2"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">İletişim</h1>
+                    <p> <i class="fa-regular fa-envelope"></i><span>m.atestopuz@gmail.com</span> </p>
+                    <p> <i class="fa-brands fa-discord"></i><span>Mergen #8451</span> </p>
+                    <p> <i class="fa-sharp fa-solid fa-globe"></i><a href="http://mertatestopuz.cf">Linkler</a></p>
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/topuz.mert/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/mert-ate%C5%9F-topuz-5b239b210/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.artstation.com/mertatestopuz" target="_blank"><i
+                                class="fa-brands fa-artstation"></i></a>
+                        <a href="https://mergentr.itch.io" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                    </div>
+                    <a href="other/Mert Ateş Topuz CV.pdf" target="_blank" download class="btn btn2">CV'mi İndir</a>
+                </div>
+                <div class="content-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="İsim" required>
+                        <input type="email" name="Email" placeholder="E-Mail" required>
+                        <textarea name="Message" rows="6" placeholder="Mesaj"></textarea>
+                        <button type="submit" class="btn btn2">Gönder</button>
+                    </form>
+
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2023 - Mert Ateş <span>Topuz</span></p>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzOlk93h0_kGEsLVTDqNRG6He7LZMZ9PjXi7g1OwdGDDi0Z-h79Eww-jCj08wpgeZK9/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Success!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
+
+<!--.....................,,-~*~,,
+......................./:.:.:.:.:.|
+......................|;.;.;.;.;./
+......................|.;.;.;.;.|
+............._,,,,,_.).;.;.;.;.|
+.........,,-":.:.:.:."~-,;.;.;.|
+........(_,,,,---,,_:.:.);.;.;..",,
+......,-":.:.:.:.:.""-,,/;.;.;.;.;.",
+.....(:.__,,,,,,,,,___);.;.;.;.;.;|
+...../"":.:.:.:.:.:.:¯""\;.;.;.;.;.,"
+....\",__,,,,,,,,,,,__/;;;;;;;;;/\
+.....\.::.:.:.:.:.:.:.;.);;;;;;;;;/:\
+.......\,,,,,---~~~~;;;;;;;;,"::::\
+.........."""~~--,,,,,,,,,,-"::::::::::\
+...................\:::::::::::::::::::::::\
+ -->
